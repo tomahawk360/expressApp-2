@@ -11,9 +11,12 @@ exports.get_user = async (req, res) => {
                 res.send(result);
 
             } else {
-                fail = 'Nombre de usuario y/o contraseña equivocada. Intente nuevamente.';
+                fail = {
+                    _id: 0
+                };
                 res.send(fail);
 
             }
+
         })
 }
